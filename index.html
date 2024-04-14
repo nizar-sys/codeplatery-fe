@@ -85,7 +85,6 @@
               <div class="text-center text-lg-start">
                 <a
                   :href="greeting.btnUrl"
-                  target="__blank"
                   class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center"
                 >
                   <span>{{ greeting.btnText }}</span>
@@ -143,6 +142,291 @@
               data-aos-delay="200"
             >
               <img :src="about.image" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section id="services" class="services">
+        <div class="container" data-aos="fade-up">
+          <header class="section-header">
+            <h2>{{services.title}}</h2>
+            <p>{{services.description}}</p>
+          </header>
+  
+          <div class="row gy-4">
+            <div
+              v-for="service in services.services_item"
+              class="col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div :class="'service-box ' + service.color">
+                <i class="ri-discuss-line icon"></i>
+                <h3>{{service.title}}</h3>
+                <p>
+                  {{service.description}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <section id="portfolio" class="portfolio">
+        <div class="container" data-aos="fade-up">
+          <header class="section-header">
+            <h2>{{portofolio.title}}</h2>
+            <p>{{portofolio.description}}</p>
+          </header>
+  
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+              <div class="col-lg-12 d-flex justify-content-center">
+                  <ul id="portfolio-flters">
+                      <li data-filter="*" class="filter-active">All</li>
+                      <li v-for="categories in portofolio.categories" :data-filter="'.filter-' + categories.slug">{{ categories.name }}</li>
+                  </ul>
+              </div>
+          </div>
+        
+  
+          <div
+            class="row gy-4 portfolio-container"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-1.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>App 1</h4>
+                  <p>App</p>
+                  <div class="portfolio-links">
+                    <a
+                      href="assets/img/portfolio/portfolio-1.jpg"
+                      data-gallery="portfolioGallery"
+                      class="portfokio-lightbox"
+                      title="App 1"
+                      ><i class="bi bi-plus"></i
+                    ></a>
+                    <a href="portfolio-details.html" title="More Details"
+                      ><i class="bi bi-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-2.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Web 3</h4>
+                  <p>Web</p>
+                  <div class="portfolio-links">
+                    <a
+                      href="assets/img/portfolio/portfolio-2.jpg"
+                      data-gallery="portfolioGallery"
+                      class="portfokio-lightbox"
+                      title="Web 3"
+                      ><i class="bi bi-plus"></i
+                    ></a>
+                    <a href="portfolio-details.html" title="More Details"
+                      ><i class="bi bi-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-3.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>App 2</h4>
+                  <p>App</p>
+                  <div class="portfolio-links">
+                    <a
+                      href="assets/img/portfolio/portfolio-3.jpg"
+                      data-gallery="portfolioGallery"
+                      class="portfokio-lightbox"
+                      title="App 2"
+                      ><i class="bi bi-plus"></i
+                    ></a>
+                    <a href="portfolio-details.html" title="More Details"
+                      ><i class="bi bi-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-4.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Card 2</h4>
+                  <p>Card</p>
+                  <div class="portfolio-links">
+                    <a
+                      href="assets/img/portfolio/portfolio-4.jpg"
+                      data-gallery="portfolioGallery"
+                      class="portfokio-lightbox"
+                      title="Card 2"
+                      ><i class="bi bi-plus"></i
+                    ></a>
+                    <a href="portfolio-details.html" title="More Details"
+                      ><i class="bi bi-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-5.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Web 2</h4>
+                  <p>Web</p>
+                  <div class="portfolio-links">
+                    <a
+                      href="assets/img/portfolio/portfolio-5.jpg"
+                      data-gallery="portfolioGallery"
+                      class="portfokio-lightbox"
+                      title="Web 2"
+                      ><i class="bi bi-plus"></i
+                    ></a>
+                    <a href="portfolio-details.html" title="More Details"
+                      ><i class="bi bi-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-6.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>App 3</h4>
+                  <p>App</p>
+                  <div class="portfolio-links">
+                    <a
+                      href="assets/img/portfolio/portfolio-6.jpg"
+                      data-gallery="portfolioGallery"
+                      class="portfokio-lightbox"
+                      title="App 3"
+                      ><i class="bi bi-plus"></i
+                    ></a>
+                    <a href="portfolio-details.html" title="More Details"
+                      ><i class="bi bi-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-7.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Card 1</h4>
+                  <p>Card</p>
+                  <div class="portfolio-links">
+                    <a
+                      href="assets/img/portfolio/portfolio-7.jpg"
+                      data-gallery="portfolioGallery"
+                      class="portfokio-lightbox"
+                      title="Card 1"
+                      ><i class="bi bi-plus"></i
+                    ></a>
+                    <a href="portfolio-details.html" title="More Details"
+                      ><i class="bi bi-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-8.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Card 3</h4>
+                  <p>Card</p>
+                  <div class="portfolio-links">
+                    <a
+                      href="assets/img/portfolio/portfolio-8.jpg"
+                      data-gallery="portfolioGallery"
+                      class="portfokio-lightbox"
+                      title="Card 3"
+                      ><i class="bi bi-plus"></i
+                    ></a>
+                    <a href="portfolio-details.html" title="More Details"
+                      ><i class="bi bi-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/portfolio-9.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+                <div class="portfolio-info">
+                  <h4>Web 3</h4>
+                  <p>Web</p>
+                  <div class="portfolio-links">
+                    <a
+                      href="assets/img/portfolio/portfolio-9.jpg"
+                      data-gallery="portfolioGallery"
+                      class="portfokio-lightbox"
+                      title="Web 3"
+                      ><i class="bi bi-plus"></i
+                    ></a>
+                    <a href="portfolio-details.html" title="More Details"
+                      ><i class="bi bi-link"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -231,7 +515,7 @@
     <script type="module">
       import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
 
-      const baseApiUrl = "http://codeplatery.kencang.id/api"; // use ur localhost if u running on your pc
+      const baseApiUrl = "http://127.0.0.1:5500/"; // use ur localhost if u running on your pc
 
       createApp({
         data() {
@@ -249,6 +533,23 @@
                 "Product Management",
                 "Marketing",
                 "Graphic Design",],
+            },
+            about: {
+              title: "Who We Are",
+              description: "Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.",
+              image: "./assets/img/about.jpg",
+              resume: "./assets/img/resume.pdf",
+            },
+            services: {
+              title: "Services",
+              description: "Veritatis et dolores facere numquam et praesentium",
+              services_item: [],
+            },
+            portofolio: {
+              title: "Portfolio",
+              description: "Veritatis et dolores facere numquam et praesentium",
+              categories: [],
+              items: [],
             },
             footer: {
               info: "Codeplatery is a web development agency.",
@@ -270,12 +571,6 @@
                 email: "codeplatery@gmail.com"
               }
             },
-            about: {
-              title: "Who We Are",
-              description: "Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.",
-              image: "./assets/img/about.jpg",
-              resume: "./assets/img/resume.pdf",
-            }
           };
         },
         async mounted() {
@@ -284,13 +579,15 @@
         methods: {
           async fetchPage(){
             try {
-              const response = await fetch(`${baseApiUrl}/page`);
+              const response = await fetch(`${baseApiUrl}/data.json`);
               const { status, data } = await response.json();
               if (status === "success") {
-                const { hero, typer_title, footer_info, footer_icons, footer_useful_links, footer_help_links, footer_contact, service, about_me } = data;
+                const { hero, typer_title, footer_info, footer_icons, footer_useful_links, footer_help_links, footer_contact, services, about_me, portofolio } = data;
                 this.updateGreeting(hero, typer_title);
                 this.updateFooterInfo(footer_info, footer_icons, footer_useful_links, footer_help_links, footer_contact);
                 this.updateAboutMe(about_me);
+                this.updateService(services);
+                this.updatePortofolio(portofolio);
               } else {
                 throw new Error("Failed to fetch page");
               }
@@ -309,6 +606,7 @@
               image: image_path,
               typerText: typerTitles.map(item => item.title),
             };
+            document.title = title;
           },
           updateFooterInfo({ info, copy_right, powered_by }, footerIcons, useFulLinks, helpLinks, footerContact) {
             this.footer = {
@@ -327,6 +625,21 @@
               description,
               image: image_url,
               resume: resume_url,
+            };
+          },
+          updateService({title, description, services_item}) {
+            this.services = {
+              title,
+              description,
+              services_item,
+            };
+          },
+          updatePortofolio({ title, description, categories, items }) {
+            this.portofolio = {
+              title,
+              description,
+              categories,
+              items,
             };
           },
           handleMobileNavToggle(event) {

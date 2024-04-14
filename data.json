@@ -1,0 +1,204 @@
+{
+  "status": "success",
+  "data": {
+    "typer_title": [
+      {
+        "id": 1,
+        "title": "Hi, we are"
+      },
+      {
+        "id": 2,
+        "title": "Web Developer"
+      },
+      {
+        "id": 3,
+        "title": "Software House Engineer"
+      },
+      {
+        "id": 4,
+        "title": "Freelancer"
+      }
+    ],
+    "hero": {
+      "id": 1,
+      "title": "Codeplatery",
+      "sub_title": "Codeplatery is a web development agency.",
+      "btn_text": "''Who we are?''",
+      "btn_url": "#about",
+      "image": "/assets/img/hero-img.png",
+      "created_at": "2024-03-14T05:22:32.000000Z",
+      "updated_at": "2024-03-27T17:43:07.000000Z",
+      "image_path": "/assets/img/hero-img.png"
+    },
+    "about_me": {
+      "id": 1,
+      "title": "''Who We Are''",
+      "description": "<p>Codeplatery is a web development agency. We are a team of professional web developers who are passionate about web development. We provide high-quality web development services to our clients. Our goal is to help our clients achieve their business goals by providing them with the best web development services.</p>",
+      "image": "/assets/img/about.jpg",
+      "resume": "/assets/files/resume.pdf",
+      "created_at": "2024-03-14T05:23:10.000000Z",
+      "updated_at": "2024-03-14T05:23:10.000000Z",
+      "image_url": "/assets/img/about.jpg",
+      "resume_url": "/assets/files/resume.pdf"
+    },
+    "footer_info": {
+      "info": "Codeplatery is a web development agency. We are a team of professional web developers who are passionate about web development. We provide high-quality web development services to our clients. Our goal is to help our clients achieve their business goals by providing them with the best web development services.",
+      "copy_right": "© 2024 Codeplatery. All Rights Reserved.",
+      "powered_by": "Powered by Codeplatery"
+    },
+    "footer_icons": [
+      {
+        "icon": "fab fa-gitlab",
+        "url": "https://gitlab.com/nizar-sys",
+        "icon_bi": "bi bi-gitlab"
+      },
+      {
+        "icon": "fab fa-github",
+        "url": "https://github.com/nizar-sys",
+        "icon_bi": "bi bi-github"
+      },
+      {
+        "icon": "fab fa-linkedin",
+        "url": "https://www.linkedin.com/in/emnizaar/",
+        "icon_bi": "bi bi-linkedin"
+      },
+      {
+        "icon": "fab fa-facebook",
+        "url": "https://www.facebook.com/niizar.id/",
+        "icon_bi": "bi bi-facebook"
+      },
+      {
+        "icon": "fab fa-twitter",
+        "url": "https://twitter.com/jokiicodev2",
+        "icon_bi": "bi bi-twitter"
+      },
+      {
+        "icon": "fab fa-instagram",
+        "url": "https://www.instagram.com/emnizaar",
+        "icon_bi": "bi bi-instagram"
+      }
+    ],
+    "footer_useful_links": [
+      {
+        "name": "Home",
+        "url": "#hero"
+      },
+      {
+        "name": "About",
+        "url": "#about"
+      },
+      {
+        "name": "Services",
+        "url": "#services"
+      },
+      {
+        "name": "Portfolio",
+        "url": "#portfolio"
+      },
+      {
+        "name": "Team",
+        "url": "#team"
+      },
+      {
+        "name": "Contact",
+        "url": "#contact"
+      }
+    ],
+    "footer_contact": {
+      "address": "Jalan Rancamaya Bogor, West Java, Indonesia 16193",
+      "phone": "+62 821-2472-1853",
+      "email": "nizarid04@gmail.com"
+    },
+    "footer_help_links": [
+      {
+        "name": "Whatsapp",
+        "url": "https://wa.me/6282124721853"
+      },
+      {
+        "name": "Email",
+        "url": "mailto:nizarid04@gmail.com"
+      }
+    ],
+    "services": {
+      "title": "Our Services",
+      "description": "What We Offer",
+      "services_item": [
+        {
+          "id": 1,
+          "title": "Web Development",
+          "description": "Entrust us with your web development needs, and we'll craft high-quality, custom web solutions tailored to your unique requirements. From front-end design to back-end development, we will deliver robust and scalable web applications that drive your business growth.",
+          "color": "red"
+        },
+        {
+          "id": 2,
+          "title": "Consultant Web Apps",
+          "description": "Entrust us with your web development needs, and we'll craft high-quality, custom web solutions tailored to your unique requirements. From front-end design to back-end development, we will deliver robust and scalable web applications that drive your business growth.",
+          "color": "blue"
+        },
+        {
+          "id": 3,
+          "title": "Hosting Website & Maintenance",
+          "description": "Let us handle the hosting and maintenance of your website to ensure it remains secure, stable, and performing optimally at all times. We provide reliable hosting solutions with 24/7 monitoring and support, along with regular maintenance.",
+          "color": "green"
+        },
+        {
+          "id": 4,
+          "title": "Error Solving",
+          "description": "Count on us for swift and effective problem-solving solutions. We'll diagnose the root causes of any errors and implement targeted fixes to ensure seamless operation and optimal performance of your digital assets",
+          "color": "green"
+        },
+        {
+          "id": 5,
+          "title": "Analyse Your Website",
+          "description": "Gain valuable insights into your website's performance and user behavior with our website analytics services. We'll help you track key metrics, identify areas for improvement, and optimize your website for better results.",
+          "color": "purple"
+        },
+        {
+          "id": 6,
+          "title": "Student Task Assistance",
+          "description": "Need help with your assignments? We're here to provide expert assistance in completing your tasks efficiently and effectively. We'll help you achieve academic success by offering guidance, support, and resources tailored to your educational needs",
+          "color": "orange"
+        }
+      ]
+    },
+    "portofolio": {
+      "title": "Our Portfolio",
+      "description": "Our Recent Works",
+      "categories": [
+        {
+          "id": 1,
+          "name": "Web Application",
+          "slug": "web-application"
+        },
+        {
+          "id": 2,
+          "name": "Mobile Application",
+          "slug": "mobile-application"
+        },
+        {
+          "id": 3,
+          "name": "Consultant Web Apps",
+          "slug": "consultant-web-apps"
+        }
+      ],
+      "items": [
+        {
+          "id": 1,
+          "image": "/assets/img/portfolio/portfolio-1.jpg",
+          "title": "System Academic",
+          "category_id": 1,
+          "description": "System Academic is a web-based application that helps students and teachers manage academic activities more efficiently. It features a user-friendly interface, robust functionality, and seamless integration with existing academic systems.",
+          "client": "Universitas Negeri Jakarta",
+          "website": "https://academic.unj.ac.id",
+          "category": {
+            "id": 1,
+            "name": "Web Application",
+            "slug": "web-application",
+            "created_at": "2024-04-13T14:07:21.000000Z",
+            "updated_at": "2024-04-13T14:07:21.000000Z"
+          }
+        }
+      ]
+    }
+  }
+}
