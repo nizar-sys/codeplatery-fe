@@ -51,14 +51,9 @@
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-            <li><a class="nav-link scrollto" href="#about">About</a></li>
-            <li><a class="nav-link scrollto" href="#services">Services</a></li>
-            <li>
-              <a class="nav-link scrollto" href="#portfolio">Portfolio</a>
-            </li>
-            <li><a class="nav-link scrollto" href="#team">Team</a></li>
-            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            <li v-for="(link, index) in footer.useFulLinks" :key="index">
+              <a :class="'nav-link scrollto' + (index === 0 ? ' active' : '')" :href="link.url">{{ link.name }}</a>
+            </li>            
             <li>
               <a class="getstarted scrollto" href="#about">Get Started</a>
             </li>
@@ -147,7 +142,7 @@
         </div>
       </section>
 
-      <!-- <section id="services" class="services">
+      <section id="services" class="services">
         <div class="container" data-aos="fade-up">
           <header class="section-header">
             <h2>{{services.title}}</h2>
@@ -171,7 +166,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <section id="portfolio" class="portfolio">
         <div class="container" data-aos="fade-up">
@@ -195,238 +190,136 @@
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div v-for="portofolio in portofolio.items" :class="'col-lg-4 col-md-6 portfolio-item filter-' + portofolio.category.slug">
               <div class="portfolio-wrap">
                 <img
-                  src="assets/img/portfolio/portfolio-1.jpg"
+                  :src="portofolio.image"
                   class="img-fluid"
                   alt=""
                 />
                 <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <p>App</p>
+                  <h4>{{ portofolio.title }}</h4>
+                  <p>{{ portofolio.description }}</p>
                   <div class="portfolio-links">
                     <a
-                      href="assets/img/portfolio/portfolio-1.jpg"
+                      :href="portofolio.image"
+                      target="_blank"
                       data-gallery="portfolioGallery"
                       class="portfokio-lightbox"
-                      title="App 1"
+                      title="{{ portofolio.title }}"
                       ><i class="bi bi-plus"></i
                     ></a>
-                    <a href="portfolio-details.html" title="More Details"
+                    <a :href="portofolio.website" title="More Details" target="_blank"
                       ><i class="bi bi-link"></i
                     ></a>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container" data-aos="fade-up">
+          <header class="section-header">
+            <h2>Contact</h2>
+            <p>Contact Us</p>
+          </header>
   
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-2.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Web 3</h4>
-                  <p>Web</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-2.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfokio-lightbox"
-                      title="Web 3"
-                      ><i class="bi bi-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bi bi-link"></i
-                    ></a>
+          <div class="row gy-4">
+            <div class="col-lg-6">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <div class="info-box">
+                    <i class="bi bi-geo-alt"></i>
+                    <h3>Address</h3>
+                    <p>{{ footer.contact.address }}</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-box">
+                    <i class="bi bi-telephone"></i>
+                    <h3>Call Us</h3>
+                    <p>{{ footer.contact.phone }}</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-box">
+                    <i class="bi bi-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p>{{ footer.contact.email }}</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="info-box">
+                    <i class="bi bi-clock"></i>
+                    <h3>Open Hours</h3>
+                    <p>Monday - Friday<br />9:00AM - 05:00PM</p>
                   </div>
                 </div>
               </div>
             </div>
   
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-3.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>App 2</h4>
-                  <p>App</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-3.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfokio-lightbox"
-                      title="App 2"
-                      ><i class="bi bi-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bi bi-link"></i
-                    ></a>
+            <div class="col-lg-6">
+              <form
+                action="#"
+                method="post"
+                class="php-email-form"
+                @submit.prevent="sendEmail"
+              >
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      placeholder="Your Name"
+                      required
+                    />
                   </div>
-                </div>
-              </div>
-            </div>
   
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-4.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Card 2</h4>
-                  <p>Card</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-4.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfokio-lightbox"
-                      title="Card 2"
-                      ><i class="bi bi-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bi bi-link"></i
-                    ></a>
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      placeholder="Your Email"
+                      required
+                    />
                   </div>
-                </div>
-              </div>
-            </div>
   
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-5.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Web 2</h4>
-                  <p>Web</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-5.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfokio-lightbox"
-                      title="Web 2"
-                      ><i class="bi bi-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bi bi-link"></i
-                    ></a>
+                  <div class="col-md-12">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="subject"
+                      placeholder="Subject"
+                      required
+                    />
                   </div>
-                </div>
-              </div>
-            </div>
   
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-6.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>App 3</h4>
-                  <p>App</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-6.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfokio-lightbox"
-                      title="App 3"
-                      ><i class="bi bi-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bi bi-link"></i
-                    ></a>
+                  <div class="col-md-12">
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      rows="6"
+                      placeholder="Message"
+                      required
+                    ></textarea>
                   </div>
-                </div>
-              </div>
-            </div>
   
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-7.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Card 1</h4>
-                  <p>Card</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-7.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfokio-lightbox"
-                      title="Card 1"
-                      ><i class="bi bi-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bi bi-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
+                  <div class="col-md-12 text-center">
+                    <div class="loading">Loading</div>
+                    <div class="error-message"></div>
+                    <div class="sent-message">
+                      Your message has been sent. Thank you!
+                    </div>
   
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-8.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Card 3</h4>
-                  <p>Card</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-8.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfokio-lightbox"
-                      title="Card 3"
-                      ><i class="bi bi-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bi bi-link"></i
-                    ></a>
+                    <button type="submit">Send Message</button>
                   </div>
                 </div>
-              </div>
-            </div>
-  
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/portfolio-9.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Web 3</h4>
-                  <p>Web</p>
-                  <div class="portfolio-links">
-                    <a
-                      href="assets/img/portfolio/portfolio-9.jpg"
-                      data-gallery="portfolioGallery"
-                      class="portfokio-lightbox"
-                      title="Web 3"
-                      ><i class="bi bi-plus"></i
-                    ></a>
-                    <a href="portfolio-details.html" title="More Details"
-                      ><i class="bi bi-link"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -512,160 +405,6 @@
 
     <script src="./assets/js/main.js"></script>
 
-    <script type="module">
-      import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
-
-      const baseApiUrl = "http://127.0.0.1:5500/"; // use ur localhost if u running on your pc
-
-      createApp({
-        data() {
-          return {
-            appName: "Codeplatery",
-            greeting: {
-              title: "Codeplatery",
-              subtitle: "Codeplatery is a web development agency.",
-              btnText: "Who we are?",
-              btnUrl: "#about",
-              image: "./assets/img/hero-img.png",
-              typerText: [
-                "Web Development",
-                "Web Design",
-                "Product Management",
-                "Marketing",
-                "Graphic Design",],
-            },
-            about: {
-              title: "Who We Are",
-              description: "Expedita voluptas omnis cupiditate totam eveniet nobis sint iste. Dolores est repellat corrupti reprehenderit.",
-              image: "./assets/img/about.jpg",
-              resume: "./assets/img/resume.pdf",
-            },
-            services: {
-              title: "Services",
-              description: "Veritatis et dolores facere numquam et praesentium",
-              services_item: [],
-            },
-            portofolio: {
-              title: "Portfolio",
-              description: "Veritatis et dolores facere numquam et praesentium",
-              categories: [],
-              items: [],
-            },
-            footer: {
-              info: "Codeplatery is a web development agency.",
-              copyRight: "Codeplatery",
-              poweredBy: "Codeplatery",
-              icons: [],
-              useFulLinks: [
-                { name: "Home", url: "#hero" },
-                { name: "About", url: "#about" },
-                { name: "Services", url: "#services" },
-                { name: "Portfolio", url: "#portfolio" },
-                { name: "Team", url: "#team" },
-                { name: "Contact", url: "#contact" },
-              ],
-              helpLinks: [{ name: "Web Design", url: "#" }],
-              contact: {
-                address: "A108 Adam Street, New York, NY 535022",
-                phone: "+1 5589 55488 55",
-                email: "codeplatery@gmail.com"
-              }
-            },
-          };
-        },
-        async mounted() {
-          this.fetchPage();
-        },
-        methods: {
-          async fetchPage(){
-            try {
-              const response = await fetch(`${baseApiUrl}/data.json`);
-              const { status, data } = await response.json();
-              if (status === "success") {
-                const { hero, typer_title, footer_info, footer_icons, footer_useful_links, footer_help_links, footer_contact, services, about_me, portofolio } = data;
-                this.updateGreeting(hero, typer_title);
-                this.updateFooterInfo(footer_info, footer_icons, footer_useful_links, footer_help_links, footer_contact);
-                this.updateAboutMe(about_me);
-                this.updateService(services);
-                this.updatePortofolio(portofolio);
-              } else {
-                throw new Error("Failed to fetch page");
-              }
-            } catch (error) {
-              console.error("Error fetching page:", error);
-            }
-            this.typerInitialize();
-            document.addEventListener("click", this.handleMobileNavToggle);
-          },
-          updateGreeting({ title, sub_title, btn_text, btn_url, image_path }, typerTitles) {
-            this.greeting = {
-              title,
-              subtitle: sub_title,
-              btnText: btn_text,
-              btnUrl: btn_url,
-              image: image_path,
-              typerText: typerTitles.map(item => item.title),
-            };
-            document.title = title;
-          },
-          updateFooterInfo({ info, copy_right, powered_by }, footerIcons, useFulLinks, helpLinks, footerContact) {
-            this.footer = {
-              info,
-              copyRight: copy_right,
-              poweredBy: powered_by,
-              icons: footerIcons,
-              useFulLinks,
-              helpLinks,
-              contact: footerContact,
-            };
-          },
-          updateAboutMe({ title, description, image_url, resume_url }) {
-            this.about = {
-              title,
-              description,
-              image: image_url,
-              resume: resume_url,
-            };
-          },
-          updateService({title, description, services_item}) {
-            this.services = {
-              title,
-              description,
-              services_item,
-            };
-          },
-          updatePortofolio({ title, description, categories, items }) {
-            this.portofolio = {
-              title,
-              description,
-              categories,
-              items,
-            };
-          },
-          handleMobileNavToggle(event) {
-            if (event.target.matches(".mobile-nav-toggle")) {
-              const navbar = document.querySelector("#navbar");
-              const mobileNavToggle = event.target;
-
-              navbar.classList.toggle("navbar-mobile");
-              mobileNavToggle.classList.toggle("bi-list");
-              mobileNavToggle.classList.toggle("bi-x");
-            }
-          },
-          typerInitialize(){
-            Typify("#typer-title", {
-              text: this.greeting.typerText,
-              delay: 100,
-              loop: true,
-              cursor: true,
-              stringDelay: 1000,
-            });
-          }
-        },
-        beforeUnmount() {
-          document.removeEventListener("click", this.handleMobileNavToggle);
-        },
-      }).mount("#app");
-    </script>
+    <script type="module" src="./assets/js/script.js"></script>
   </body>
 </html>
