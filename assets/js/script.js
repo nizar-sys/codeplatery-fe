@@ -1,6 +1,6 @@
 import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
 
-const baseApiUrl = "http://127.0.0.1:5500/"; // use ur localhost if u running on your pc
+const baseApiUrl = window.location.origin; // use ur localhost if u running on your pc
 
 createApp({
   data() {
