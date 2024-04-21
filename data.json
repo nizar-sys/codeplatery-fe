@@ -4,26 +4,34 @@
     "typer_title": [
       {
         "id": 1,
-        "title": "Hi, we are"
+        "title": "Hi, We Are CodePlatery"
       },
       {
         "id": 2,
-        "title": "Web Developer"
+        "title": "Innovative Solutions Provider"
       },
       {
         "id": 3,
-        "title": "Software House Engineer"
+        "title": "Digital Transformation Expert"
       },
       {
         "id": 4,
-        "title": "Freelancer"
+        "title": "Next-Gen Software Engineer"
+      },
+      {
+        "id": 5,
+        "title": "Technology Innovator"
+      },
+      {
+        "id": 6,
+        "title": "Digital Product Specialist"
       }
     ],
     "hero": {
       "id": 1,
-      "title": "Codeplatery",
-      "sub_title": "Codeplatery is a web development agency.",
-      "btn_text": "''Who we are?''",
+      "title": "CodePlatery",
+      "sub_title": "CodePlatery is Your Tech Solutions",
+      "btn_text": "About Us",
       "btn_url": "#about",
       "image": "/assets/img/hero-img.png",
       "created_at": "2024-03-14T05:22:32.000000Z",
@@ -35,11 +43,11 @@
       "title": "''Who We Are''",
       "description": "<p>Codeplatery is a web development agency. We are a team of professional web developers who are passionate about web development. We provide high-quality web development services to our clients. Our goal is to help our clients achieve their business goals by providing them with the best web development services.</p>",
       "image": "/assets/img/about.jpg",
-      "resume": "/assets/files/resume.pdf",
+      "resume": "/assets/files/about-us.pdf",
       "created_at": "2024-03-14T05:23:10.000000Z",
       "updated_at": "2024-03-14T05:23:10.000000Z",
       "image_url": "/assets/img/about.jpg",
-      "resume_url": "/assets/files/resume.pdf"
+      "resume_url": "/assets/files/about-us.pdf"
     },
     "footer_info": {
       "info": "Codeplatery is a web development agency. We are a team of professional web developers who are passionate about web development. We provide high-quality web development services to our clients. Our goal is to help our clients achieve their business goals by providing them with the best web development services.",
@@ -101,14 +109,14 @@
       }
     ],
     "footer_contact": {
-      "address": "Jalan Rancamaya Bogor, West Java, Indonesia 16193",
-      "phone": "+62 821-2472-1853",
-      "email": "nizarid04@gmail.com"
+      "address": "Bumi Pratama Timur No.10 Block I, RT.6/RW.6, Dukuh, Kec. Kramat Jati, East Jakarta City, Special Capital Region of Jakarta 13550",
+      "phone": "+62 858-1953-7360",
+      "email": "codeplatery@gmail.com"
     },
     "footer_help_links": [
       {
         "name": "Whatsapp",
-        "url": "https://wa.me/6282124721853"
+        "url": "https://wa.me/6285819537360"
       },
       {
         "name": "Email",
@@ -180,12 +188,12 @@
       "items": [
         {
           "id": 1,
-          "image": "/assets/img/portfolio/portfolio-1.jpg",
+          "image": "/assets/img/portfolio/irab.jpeg",
           "title": "System Academic",
           "category_id": 1,
-          "description": "System Academic is a web-based application that helps students and teachers manage academic activities more efficiently. It features a user-friendly interface, robust functionality, and seamless integration with existing academic systems.",
-          "client": "Universitas Negeri Jakarta",
-          "website": "https://academic.unj.ac.id",
+          "description": "Certification App",
+          "client": "unknown",
+          "website": "/assets/img/detail-portos/poster-irab.pdf",
           "category": {
             "id": 1,
             "name": "Web Application",
@@ -196,16 +204,144 @@
         },
         {
           "id": 2,
-          "image": "/assets/img/portfolio/portfolio-2.jpg",
+          "image": "/assets/img/portfolio/mawapres.jpeg",
           "title": "System Academic",
-          "category_id": 2,
-          "description": "System Academic is a web-based application that helps students and teachers manage academic activities more efficiently. It features a user-friendly interface, robust functionality, and seamless integration with existing academic systems.",
-          "client": "Universitas Negeri Jakarta",
-          "website": "https://academic.unj.ac.id",
+          "category_id": 1,
+          "description": "Goods Data Collection",
+          "client": "unknown",
+          "website": "/assets/img/detail-portos/poster-mawapres.pdf",
           "category": {
             "id": 2,
+            "name": "Web Application",
+            "slug": "web-application",
+            "created_at": "2024-04-13T14:07:21.000000Z",
+            "updated_at": "2024-04-13T14:07:21.000000Z"
+          }
+        },
+        {
+          "id": 3,
+          "image": "/assets/img/portfolio/cv-maker.jpeg",
+          "title": "System Academic",
+          "category_id": 1,
+          "description": "CV Maker",
+          "client": "unknown",
+          "website": "/assets/img/detail-portos/CV-MAKER.pdf",
+          "category": {
+            "id": 3,
+            "name": "Web Application",
+            "slug": "web-application",
+            "created_at": "2024-04-13T14:07:21.000000Z",
+            "updated_at": "2024-04-13T14:07:21.000000Z"
+          }
+        },
+        {
+          "id": 4,
+          "image": "/assets/img/portfolio/pengaduan-masyarakat.jpeg",
+          "title": "Mobile Applications",
+          "category_id": 2,
+          "description": "Public Complaints App",
+          "client": "unknown",
+          "website": "/assets/img/detail-portos/poster-pengaduan-masyarakat.pdf",
+          "category": {
+            "id": 4,
             "name": "Mobile Application",
             "slug": "mobile-application",
+            "created_at": "2024-04-13T14:07:21.000000Z",
+            "updated_at": "2024-04-13T14:07:21.000000Z"
+          }
+        },
+        {
+          "id": 5,
+          "image": "/assets/img/portfolio/kph-getah.jpeg",
+          "title": "System Academic",
+          "category_id": 1,
+          "description": "Plant Monitoring",
+          "client": "unknown",
+          "website": "/assets/img/detail-portos/poster-kph-getah.pdf",
+          "category": {
+            "id": 5,
+            "name": "Web Application",
+            "slug": "web-application",
+            "created_at": "2024-04-13T14:07:21.000000Z",
+            "updated_at": "2024-04-13T14:07:21.000000Z"
+          }
+        },
+        {
+          "id": 6,
+          "image": "/assets/img/portfolio/one-supporting-system.jpeg",
+          "title": "Local Government Services",
+          "category_id": 1,
+          "description": "Monitoring Regional Electional Data",
+          "client": "unknown",
+          "website": "/assets/img/detail-portos/poster-onesupporting.pdf",
+          "category": {
+            "id": 6,
+            "name": "Web Application",
+            "slug": "web-application",
+            "created_at": "2024-04-13T14:07:21.000000Z",
+            "updated_at": "2024-04-13T14:07:21.000000Z"
+          }
+        },
+        {
+          "id": 7,
+          "image": "/assets/img/portfolio/plane-ticketing.png",
+          "title": "Mobile Applications",
+          "category_id": 2,
+          "description": "Plane Ticketing App",
+          "client": "unknown",
+          "website": "/assets/img/detail-portos/poster-plane-ticketing.pdf",
+          "category": {
+            "id": 7,
+            "name": "Web Application",
+            "slug": "web-application",
+            "created_at": "2024-04-13T14:07:21.000000Z",
+            "updated_at": "2024-04-13T14:07:21.000000Z"
+          }
+        },
+        {
+          "id": 8,
+          "image": "/assets/img/portfolio/sistem-diagnosa-penyakit.jpeg",
+          "title": "Mobile Applications",
+          "category_id": 2,
+          "description": "Disease Diagnosis System",
+          "client": "unknown",
+          "website": "/assets/img/detail-portos/poster-sistem-diagnosa-penyakit.pdf",
+          "category": {
+            "id": 8,
+            "name": "Web Application",
+            "slug": "web-application",
+            "created_at": "2024-04-13T14:07:21.000000Z",
+            "updated_at": "2024-04-13T14:07:21.000000Z"
+          }
+        },
+        {
+          "id": 9,
+          "image": "/assets/img/portfolio/tps-app.jpeg",
+          "title": "System Academic",
+          "category_id": 1,
+          "description": "Polling Place Data",
+          "client": "unknown",
+          "website": "/assets/img/detail-portos/poster-tps-app.pdf",
+          "category": {
+            "id": 9,
+            "name": "Web Application",
+            "slug": "web-application",
+            "created_at": "2024-04-13T14:07:21.000000Z",
+            "updated_at": "2024-04-13T14:07:21.000000Z"
+          }
+        },
+        {
+          "id": 10,
+          "image": "/assets/img/portfolio/pendataan-barang.jpeg",
+          "title": "System Academic",
+          "category_id": 1,
+          "description": "Inventory",
+          "client": "unknown",
+          "website": "/assets/img/detail-portos/poster-ecom-test.pdf",
+          "category": {
+            "id": 10,
+            "name": "Web Application",
+            "slug": "web-application",
             "created_at": "2024-04-13T14:07:21.000000Z",
             "updated_at": "2024-04-13T14:07:21.000000Z"
           }
